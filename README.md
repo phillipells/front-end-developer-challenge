@@ -34,3 +34,5 @@ Players of TitanStar Legends can spend talent points that they’ve collected on
 - Displays current point total
 - The user must select the items in order.
     - For example: The user may not put a point in the cake without first having put points in the chevrons and the silverware (in that order).
+
+test commit
