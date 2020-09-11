@@ -5,7 +5,7 @@
         <div
           id="chevron-talent"
           class="talent-icon"
-          :class="{ 'talent-activated': talentActivated(1) }"
+          :class="{ 'talent-activated chevron-activated': talentActivated(1) }"
           @click="addTalent(1)"
           @click.right="removeTalent(1)"
           @contextmenu.prevent="hideContextMenu"></div>
@@ -13,7 +13,7 @@
         <div
           id="silverware-talent"
           class="talent-icon"
-          :class="{ 'talent-activated': talentActivated(2) }"
+          :class="{ 'talent-activated silverware-activated': talentActivated(2) }"
           @click="addTalent(2)"
           @click.right="removeTalent(2)"
           @contextmenu.prevent="hideContextMenu"></div>
@@ -21,7 +21,7 @@
         <div
           id="cake-talent"
           class="talent-icon"
-          :class="{ 'talent-activated': talentActivated(3) }"
+          :class="{ 'talent-activated cake-activated': talentActivated(3) }"
           @click="addTalent(3)"
           @click.right="removeTalent(3)"
           @contextmenu.prevent="hideContextMenu"></div>
@@ -29,7 +29,7 @@
         <div
           id="crown-talent"
           class="talent-icon"
-          :class="{ 'talent-activated': talentActivated(4) }"
+          :class="{ 'talent-activated crown-activated': talentActivated(4) }"
           @click="addTalent(4)"
           @click.right="removeTalent(4)"
           @contextmenu.prevent="hideContextMenu"></div>
@@ -38,7 +38,7 @@
         <div
           id="beard-talent"
           class="talent-icon"
-          :class="{ 'talent-activated': talentActivated(1) }"
+          :class="{ 'talent-activated beard-activated': talentActivated(1) }"
           @click="addTalent(1)"
           @click.right="removeTalent(1)"
           @contextmenu.prevent="hideContextMenu"></div>
@@ -46,7 +46,7 @@
         <div
           id="snorkel-talent"
           class="talent-icon"
-          :class="{ 'talent-activated': talentActivated(2) }"
+          :class="{ 'talent-activated snorkel-activated': talentActivated(2) }"
           @click="addTalent(2)"
           @click.right="removeTalent(2)"
           @contextmenu.prevent="hideContextMenu"></div>
@@ -54,7 +54,7 @@
         <div
           id="bolt-talent"
           class="talent-icon"
-          :class="{ 'talent-activated': talentActivated(3) }"
+          :class="{ 'talent-activated bolt-activated': talentActivated(3) }"
           @click="addTalent(3)"
           @click.right="removeTalent(3)"
           @contextmenu.prevent="hideContextMenu"></div>
@@ -62,7 +62,7 @@
         <div
           id="skull-talent"
           class="talent-icon"
-          :class="{ 'talent-activated': talentActivated(4) }"
+          :class="{ 'talent-activated skull-activated': talentActivated(4) }"
           @click="addTalent(4)"
           @click.right="removeTalent(4)"
           @contextmenu.prevent="hideContextMenu"></div>
@@ -121,6 +121,15 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+$active-chevron-sprite: url(../assets/talent-icons-sprite.png) 0 0;
+$active-silverware-sprite: url(../assets/talent-icons-sprite.png) -50px 0;
+$active-cake-sprite: url(../assets/talent-icons-sprite.png) -100px 0;
+$active-crown-sprite: url(../assets/talent-icons-sprite.png) -150px 0;
+$active-beard-sprite: url(../assets/talent-icons-sprite.png) -200px 0;
+$active-snorkel-sprite: url(../assets/talent-icons-sprite.png) -250px 0;
+$active-bolt-sprite: url(../assets/talent-icons-sprite.png) -300px 0;
+$active-skull-sprite: url(../assets/talent-icons-sprite.png) -350px 0;
+
 .talent-path-name {
   display: inline-flex;
   margin-right: 40px;
@@ -164,63 +173,95 @@ export default {
   background: url(../assets/talent-icons-sprite.png) 0 -50px;
 
   &:hover {
-    background: url(../assets/talent-icons-sprite.png) 0 0;
+    background: $active-chevron-sprite;
   }
+}
+
+.chevron-activated {
+  background: $active-chevron-sprite !important;
 }
 
 #silverware-talent {
   background: url(../assets/talent-icons-sprite.png) -50px -50px;
 
   &:hover {
-    background: url(../assets/talent-icons-sprite.png) -50px 0;
+    background: $active-silverware-sprite;
   }
+}
+
+.silverware-activated {
+  background: $active-silverware-sprite !important;
 }
 
 #cake-talent {
   background: url(../assets/talent-icons-sprite.png) -100px -50px;
 
   &:hover {
-    background: url(../assets/talent-icons-sprite.png) -100px 0;
+    background: $active-cake-sprite;
   }
+}
+
+.cake-activated {
+  background: $active-cake-sprite !important;
 }
 
 #crown-talent {
   background: url(../assets/talent-icons-sprite.png) -150px -50px;
 
   &:hover {
-    background: url(../assets/talent-icons-sprite.png) -150px 0;
+    background: $active-crown-sprite;
   }
+}
+
+.crown-activated {
+  background: $active-crown-sprite !important;
 }
 
 #beard-talent {
   background: url(../assets/talent-icons-sprite.png) -200px -50px;
 
   &:hover {
-    background: url(../assets/talent-icons-sprite.png) -200px 0;
+    background: $active-beard-sprite;
   }
+}
+
+.beard-activated {
+  background: $active-beard-sprite !important;
 }
 
 #snorkel-talent {
   background: url(../assets/talent-icons-sprite.png) -250px -50px;
 
   &:hover {
-    background: url(../assets/talent-icons-sprite.png) -250px 0;
+    background: $active-snorkel-sprite;
   }
+}
+
+.snorkel-activated {
+  background: $active-snorkel-sprite !important;
 }
 
 #bolt-talent {
   background: url(../assets/talent-icons-sprite.png) -300px -50px;
 
   &:hover {
-    background: url(../assets/talent-icons-sprite.png) -300px 0;
+    background: $active-bolt-sprite;
   }
+}
+
+.bolt-activated {
+  background: $active-bolt-sprite !important;
 }
 
 #skull-talent {
   background: url(../assets/talent-icons-sprite.png) -350px -50px;
 
   &:hover {
-    background: url(../assets/talent-icons-sprite.png) -350px 0;
+    background: $active-skull-sprite;
   }
+}
+
+.skull-activated {
+  background: $active-skull-sprite !important;
 }
 </style>

@@ -3,7 +3,6 @@ export default {
     state.talentPoints.remaining = payload
   },
   addPathLevel (state, payload) {
-    console.log(payload)
     const talentIndex = state.talentPaths.findIndex((path) => {
       return path.id === payload.id
     })
@@ -11,7 +10,6 @@ export default {
     state.talentPaths[talentIndex].levels.push(payload.level)
   },
   removePathLevel (state, payload) {
-    console.log(payload)
     const talentIndex = state.talentPaths.findIndex((path) => {
       return path.id === payload
     })
