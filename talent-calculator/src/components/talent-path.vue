@@ -9,6 +9,7 @@
           @click="addTalent(1)"
           @click.right="removeTalent(1)"
           @contextmenu.prevent="hideContextMenu"></div>
+        <div class="spacer-block" :class="{ 'spacer-block-activated': talentActivated(1) }"></div>
         <div
           id="silverware-talent"
           class="talent-icon"
@@ -16,6 +17,7 @@
           @click="addTalent(2)"
           @click.right="removeTalent(2)"
           @contextmenu.prevent="hideContextMenu"></div>
+          <div class="spacer-block" :class="{ 'spacer-block-activated': talentActivated(2) }"></div>
         <div
           id="cake-talent"
           class="talent-icon"
@@ -23,6 +25,7 @@
           @click="addTalent(3)"
           @click.right="removeTalent(3)"
           @contextmenu.prevent="hideContextMenu"></div>
+          <div class="spacer-block" :class="{ 'spacer-block-activated': talentActivated(3) }"></div>
         <div
           id="crown-talent"
           class="talent-icon"
@@ -39,6 +42,7 @@
           @click="addTalent(1)"
           @click.right="removeTalent(1)"
           @contextmenu.prevent="hideContextMenu"></div>
+          <div class="spacer-block" :class="{ 'spacer-block-activated': talentActivated(1) }"></div>
         <div
           id="snorkel-talent"
           class="talent-icon"
@@ -46,6 +50,7 @@
           @click="addTalent(2)"
           @click.right="removeTalent(2)"
           @contextmenu.prevent="hideContextMenu"></div>
+          <div class="spacer-block" :class="{ 'spacer-block-activated': talentActivated(2) }"></div>
         <div
           id="bolt-talent"
           class="talent-icon"
@@ -53,6 +58,7 @@
           @click="addTalent(3)"
           @click.right="removeTalent(3)"
           @contextmenu.prevent="hideContextMenu"></div>
+          <div class="spacer-block" :class="{ 'spacer-block-activated': talentActivated(3) }"></div>
         <div
           id="skull-talent"
           class="talent-icon"
@@ -105,7 +111,7 @@ export default {
       this.removePathLevel(this.path.id)
     },
     talentActivated (level) {
-      return level >= this.path.levels.length
+      return level <= this.path.levels.length
     },
     hideContextMenu () {
       return false
@@ -115,29 +121,38 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.talent-path {
-  display: flex;
-  // position: absolute;
-  align-items: center;
-  // left: 5%;
-  // top: 30%;
+.talent-path-name {
+  display: inline-flex;
+  margin-right: 40px;
+  color: rgb(192, 193, 194);
+}
 
-  .talent-path-name {
-    display: inline-flex;
+.talent-icon {
+  display: inline-flex;
+  flex: 1;
+  width: 50px;
+  height: 50px;
+  border: 5px solid;
+  border-image-slice: 1;
+  border-image-source: linear-gradient(to bottom, rgb(75, 75, 75), rgb(57, 57, 57));
+
+  &:hover {
+    cursor: pointer;
   }
+}
 
-  .talent-icon {
-    display: inline-flex;
-    width: 50px;
-    height: 50px;
-    border: 5px solid;
-    border-image-slice: 1;
-    border-image-source: linear-gradient(to bottom, rgb(75, 75, 75), rgb(57, 57, 57));
+.spacer-block {
+  display: inline-flex;
+  border: 1px solid rgb(30, 33, 35);
+  height: 10px;
+  width: 50px;
+  margin-bottom: 22px;
+  background-color: rgb(27, 29, 29);
+}
 
-    &:hover {
-      cursor: pointer;
-    }
-  }
+.spacer-block-activated {
+  border: 1px solid rgb(65, 66, 67);
+  background-color: rgb(48, 50, 52);
 }
 
 .talent-activated {

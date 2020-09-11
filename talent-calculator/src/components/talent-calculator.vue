@@ -2,8 +2,10 @@
   <div class="talent-calculator">
     <img class="background-image" src="../assets/talent-calc-bg.png" alt="background">
     <div class="talent-title">TitanStar Legends - Rune Mastery Loadout Talent Calculator 9000</div>
-    <div v-for="path in getTalentPaths" :key="path.id">
-      <talent-path :path="path" />
+    <div class="talent-paths">
+      <div v-for="path in getTalentPaths" :key="path.id">
+        <talent-path class="talent-path" :path="path" />
+      </div>
     </div>
     <talent-points />
   </div>
@@ -40,6 +42,19 @@ export default {
     transform: translate(-50%, -50%);
     padding: 5px 10px 5px 10px;
     background-color: rgb(25, 27, 29);
+  }
+
+  .talent-paths {
+    position: absolute;
+    align-items: center;
+    top: 30%;
+    left: 5%;
+
+    .talent-path {
+      display: flex;
+      align-items: center;
+      margin-bottom: 20px;
+    }
   }
 }
 </style>

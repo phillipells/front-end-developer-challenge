@@ -1,10 +1,11 @@
 <template>
   <div id="points-total">
     <div class="points-remaining">
-      {{ remainingPoints }} / {{ maxPoints }}
+      {{ pointsSpent }} / {{ maxPoints }}
     </div>
-    <br />
+    <div class="points-text">
       Points Spent
+    </div>
     </div>
 </template>
 
@@ -16,8 +17,8 @@ export default {
   name: 'TalentPoints',
   computed: {
     ...mapGetters(['getTalentPoints']),
-    remainingPoints () {
-      return this.getTalentPoints.remaining
+    pointsSpent () {
+      return this.getTalentPoints.max - this.getTalentPoints.remaining
     },
     maxPoints () {
       return this.getTalentPoints.max
@@ -28,16 +29,18 @@ export default {
 
 <style lang="scss" scoped>
 #points-total {
-  display: inline-flex;
+  display: flex;
+  flex-direction: column;
   position: absolute;
   left: 80%;
   top: 50%;
   color: rgb(52, 73, 95);
   background-color: rgb(8, 11, 12);
   border: 1px solid rgb(14, 16, 16);
-  padding: 10px 10px 10px 10px;
+  padding: 20px 20px 20px 20px;
 
   .points-remaining {
+    text-align: center;
     color: #ffffff;
   }
 }
