@@ -1,71 +1,73 @@
 <template>
-  <div class="talent-path">
+  <div>
       <span class="talent-path-name">TALENT PATH {{ path.id }}</span>
-      <div v-if="path.id === 1">
-        <div
-          id="chevron-talent"
-          class="talent-icon"
-          :class="{ 'talent-activated chevron-activated': talentActivated(1) }"
-          @click="addTalent(1)"
-          @click.right="removeTalent(1)"
-          @contextmenu.prevent="hideContextMenu"></div>
-        <div class="spacer-block" :class="{ 'spacer-block-activated': talentActivated(1) }"></div>
-        <div
-          id="silverware-talent"
-          class="talent-icon"
-          :class="{ 'talent-activated silverware-activated': talentActivated(2) }"
-          @click="addTalent(2)"
-          @click.right="removeTalent(2)"
-          @contextmenu.prevent="hideContextMenu"></div>
-          <div class="spacer-block" :class="{ 'spacer-block-activated': talentActivated(2) }"></div>
-        <div
-          id="cake-talent"
-          class="talent-icon"
-          :class="{ 'talent-activated cake-activated': talentActivated(3) }"
-          @click="addTalent(3)"
-          @click.right="removeTalent(3)"
-          @contextmenu.prevent="hideContextMenu"></div>
-          <div class="spacer-block" :class="{ 'spacer-block-activated': talentActivated(3) }"></div>
-        <div
-          id="crown-talent"
-          class="talent-icon"
-          :class="{ 'talent-activated crown-activated': talentActivated(4) }"
-          @click="addTalent(4)"
-          @click.right="removeTalent(4)"
-          @contextmenu.prevent="hideContextMenu"></div>
-      </div>
-      <div v-if="path.id === 2">
-        <div
-          id="beard-talent"
-          class="talent-icon"
-          :class="{ 'talent-activated beard-activated': talentActivated(1) }"
-          @click="addTalent(1)"
-          @click.right="removeTalent(1)"
-          @contextmenu.prevent="hideContextMenu"></div>
+      <div class="talent-groups">
+        <div class="talent-group" v-if="path.id === 1">
+          <div
+            id="chevron-talent"
+            class="talent-icon"
+            :class="{ 'talent-activated chevron-activated': talentActivated(1) }"
+            @click="addTalent(1)"
+            @click.right="removeTalent(1)"
+            @contextmenu.prevent="hideContextMenu"></div>
           <div class="spacer-block" :class="{ 'spacer-block-activated': talentActivated(1) }"></div>
-        <div
-          id="snorkel-talent"
-          class="talent-icon"
-          :class="{ 'talent-activated snorkel-activated': talentActivated(2) }"
-          @click="addTalent(2)"
-          @click.right="removeTalent(2)"
-          @contextmenu.prevent="hideContextMenu"></div>
-          <div class="spacer-block" :class="{ 'spacer-block-activated': talentActivated(2) }"></div>
-        <div
-          id="bolt-talent"
-          class="talent-icon"
-          :class="{ 'talent-activated bolt-activated': talentActivated(3) }"
-          @click="addTalent(3)"
-          @click.right="removeTalent(3)"
-          @contextmenu.prevent="hideContextMenu"></div>
-          <div class="spacer-block" :class="{ 'spacer-block-activated': talentActivated(3) }"></div>
-        <div
-          id="skull-talent"
-          class="talent-icon"
-          :class="{ 'talent-activated skull-activated': talentActivated(4) }"
-          @click="addTalent(4)"
-          @click.right="removeTalent(4)"
-          @contextmenu.prevent="hideContextMenu"></div>
+          <div
+            id="silverware-talent"
+            class="talent-icon"
+            :class="{ 'talent-activated silverware-activated': talentActivated(2) }"
+            @click="addTalent(2)"
+            @click.right="removeTalent(2)"
+            @contextmenu.prevent="hideContextMenu"></div>
+            <div class="spacer-block" :class="{ 'spacer-block-activated': talentActivated(2) }"></div>
+          <div
+            id="cake-talent"
+            class="talent-icon"
+            :class="{ 'talent-activated cake-activated': talentActivated(3) }"
+            @click="addTalent(3)"
+            @click.right="removeTalent(3)"
+            @contextmenu.prevent="hideContextMenu"></div>
+            <div class="spacer-block" :class="{ 'spacer-block-activated': talentActivated(3) }"></div>
+          <div
+            id="crown-talent"
+            class="talent-icon"
+            :class="{ 'talent-activated crown-activated': talentActivated(4) }"
+            @click="addTalent(4)"
+            @click.right="removeTalent(4)"
+            @contextmenu.prevent="hideContextMenu"></div>
+        </div>
+        <div class="talent-group" v-if="path.id === 2">
+          <div
+            id="beard-talent"
+            class="talent-icon"
+            :class="{ 'talent-activated beard-activated': talentActivated(1) }"
+            @click="addTalent(1)"
+            @click.right="removeTalent(1)"
+            @contextmenu.prevent="hideContextMenu"></div>
+            <div class="spacer-block" :class="{ 'spacer-block-activated': talentActivated(1) }"></div>
+          <div
+            id="snorkel-talent"
+            class="talent-icon"
+            :class="{ 'talent-activated snorkel-activated': talentActivated(2) }"
+            @click="addTalent(2)"
+            @click.right="removeTalent(2)"
+            @contextmenu.prevent="hideContextMenu"></div>
+            <div class="spacer-block" :class="{ 'spacer-block-activated': talentActivated(2) }"></div>
+          <div
+            id="bolt-talent"
+            class="talent-icon"
+            :class="{ 'talent-activated bolt-activated': talentActivated(3) }"
+            @click="addTalent(3)"
+            @click.right="removeTalent(3)"
+            @contextmenu.prevent="hideContextMenu"></div>
+            <div class="spacer-block" :class="{ 'spacer-block-activated': talentActivated(3) }"></div>
+          <div
+            id="skull-talent"
+            class="talent-icon"
+            :class="{ 'talent-activated skull-activated': talentActivated(4) }"
+            @click="addTalent(4)"
+            @click.right="removeTalent(4)"
+            @contextmenu.prevent="hideContextMenu"></div>
+        </div>
       </div>
     </div>
 </template>
@@ -131,32 +133,71 @@ $active-bolt-sprite: url(../assets/talent-icons-sprite.png) -300px 0;
 $active-skull-sprite: url(../assets/talent-icons-sprite.png) -350px 0;
 
 .talent-path-name {
-  display: inline-flex;
-  margin-right: 40px;
+  display: block;
   color: rgb(192, 193, 194);
+  margin-bottom: 20%;
+  margin-left: 5%;
+  text-align: center;
+
+  @media (min-width: 800px) {
+    display: inline-flex;
+    margin-right: 40px;
+    margin-left: 0;
+    margin-bottom: 0;
+  }
+}
+
+.talent-groups {
+  // margin-left: 70%;
+  @media (min-width: 800px) {
+    margin-left: auto;
+  }
+}
+
+.talent-group {
+  display: inline-flex;
+  flex-direction: column;
+  margin-left: 5px;
+  @media (min-width: 800px) {
+    display: block;
+    // margin-right: 40px;
+  }
 }
 
 .talent-icon {
-  display: inline-flex;
-  flex: 1;
   width: 50px;
   height: 50px;
   border: 5px solid;
   border-image-slice: 1;
   border-image-source: linear-gradient(to bottom, rgb(75, 75, 75), rgb(57, 57, 57));
+  margin-bottom: 20px;
 
   &:hover {
     cursor: pointer;
+  }
+
+  @media (min-width: 800px) {
+    display: inline-flex;
+    flex: 1;
+    margin-bottom: 0;
   }
 }
 
 .spacer-block {
   display: inline-flex;
   border: 1px solid rgb(30, 33, 35);
+  margin-left: 3px;
+  margin-bottom: 20px;
   height: 10px;
   width: 50px;
-  margin-bottom: 22px;
   background-color: rgb(27, 29, 29);
+  transform: rotate(90deg);
+
+  @media (min-width: 800px) {
+    transform: rotate(0deg);
+    margin-bottom: 22px;
+    margin-left: 0;
+  }
 }
 
 .spacer-block-activated {

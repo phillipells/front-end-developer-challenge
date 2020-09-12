@@ -1,6 +1,5 @@
 <template>
   <div class="talent-calculator">
-    <img class="background-image" src="../assets/talent-calc-bg.png" alt="background">
     <div class="talent-title">TitanStar Legends - Rune Mastery Loadout Talent Calculator 9000</div>
     <div class="talent-paths">
       <div v-for="path in getTalentPaths" :key="path.id">
@@ -32,28 +31,52 @@ export default {
 
 <style scoped lang="scss">
 .talent-calculator {
-  position: relative;
+  // position: relative;
+  display: flex;
+  flex-direction: column;
 
   .talent-title {
-    display: flex;
+    display: inline-flex;
     position: absolute;
     left: 50%;
-    top: 10%;
+    top: 8%;
     transform: translate(-50%, -50%);
     padding: 5px 10px 5px 10px;
     background-color: rgb(25, 27, 29);
+    text-align: center;
+
+    @media (min-width: 800px) {
+      position: relative;
+      flex-direction: row;
+      display: block;
+      top: 10%;
+    }
   }
 
   .talent-paths {
+    display: inline-flex;
     position: absolute;
     align-items: center;
-    top: 30%;
-    left: 5%;
+    top: 15%;
+    left: 27%;
 
     .talent-path {
-      display: flex;
       align-items: center;
       margin-bottom: 20px;
+      width: 50%;
+
+      @media (min-width: 800px) {
+        display: flex;
+        width: auto;
+      }
+    }
+
+    @media (min-width: 800px) {
+      position: relative;
+      flex-direction: row;
+      display: block;
+      top: 30%;
+      left: 5%;
     }
   }
 }
