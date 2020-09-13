@@ -148,7 +148,6 @@ $active-skull-sprite: url(../assets/talent-icons-sprite.png) -350px 0;
 }
 
 .talent-groups {
-  // margin-left: 70%;
   @media (min-width: 800px) {
     margin-left: auto;
   }
@@ -160,7 +159,6 @@ $active-skull-sprite: url(../assets/talent-icons-sprite.png) -350px 0;
   margin-left: 5px;
   @media (min-width: 800px) {
     display: block;
-    // margin-right: 40px;
   }
 }
 

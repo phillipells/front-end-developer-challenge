@@ -25,11 +25,10 @@ html, body {
 
 #app {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-  // display: flex;
   color: #FFFFFF;
-  // flex-direction: column;
 
   @media (min-width: 800px) {
+    position: relative;
     display: flex;
     flex-direction: row;
   }
@@ -40,11 +39,6 @@ html, body {
     min-width: 100%;
     min-height: 100%;
     position: fixed;
-  }
-
-  @media (min-width: 800px) {
-    position: relative;
-    flex-direction: row;
   }
 }
 </style>

@@ -35,6 +35,7 @@ export default {
   color: rgb(52, 73, 95);
   background-color: rgb(8, 11, 12);
   border: 1px solid rgb(14, 16, 16);
+  box-shadow: 0px 0px 6px 1px rgb(33, 38, 43);
   padding: 5px 5px 5px 5px;
 
   .points-remaining {
@@ -44,8 +45,8 @@ export default {
 
   @media (min-width: 800px) {
     position: absolute;
-    left: 80%;
-    top: 50%;
+    left: 50%;
+    top: 60%;
     padding: 20px 20px 20px 20px;
   }
 }

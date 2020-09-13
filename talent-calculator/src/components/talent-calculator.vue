@@ -31,7 +31,6 @@ export default {
 
 <style scoped lang="scss">
 .talent-calculator {
-  // position: relative;
   display: flex;
   flex-direction: column;
 
@@ -49,6 +48,7 @@ export default {
       position: relative;
       flex-direction: row;
       display: block;
+      left: 70%;
       top: 10%;
     }
   }
