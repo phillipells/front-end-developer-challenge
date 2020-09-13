@@ -1,13 +1,11 @@
 # Front-End Developer Challenge
-In this repo you will find a mock-up and all the necessary assets (in a separate folder). The design is of a tool for a fictitious game called “TitanStar Legends”, and will not be repurposed or otherwise utilized by D&D Beyond – it is only a coding challenge.
+Steps to run:
+- npm install
+- npm run serve
+- navigate to http://localhost:8080/
 
+Left click a talent to spend a point. Right click a talent to remove it and add a point.
 
-Below are specific requirements we have which cannot be adequately expressed through the mock-up. This is not a timed assignment, but it should probably take a couple of hours. We ask that you have your assessment completed and returned within 7 days of receiving it. Good luck!
-
-If you feel that you have a personal project that closely resembles this project, send us the repo and we’ll evaluate that project instead. Only your contributions will be evaluated and the project must demonstrate the following competencies with:
-- Making an app mobile-friendly/responsive
-- Using SCSS
-- Creating a stateful JS application
 
 ## Assessment expectations
 
