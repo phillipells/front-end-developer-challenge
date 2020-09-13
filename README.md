@@ -5,3 +5,7 @@ Steps to run:
 - navigate to http://localhost:8080/
 
 Left click a talent to spend a point. Right click a talent to remove it and add a point.
+
+# TODOS
+Add additional functionality
+Add Jest unit tests
