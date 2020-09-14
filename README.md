@@ -7,5 +7,6 @@ Steps to run:
 Left click a talent to spend a point. Right click a talent to remove it and add a point.
 
 # TODOS
-Add additional functionality
-Add Jest unit tests
+- Get questions about implementation answered
+- Add additional functionality
+- Add Jest unit tests
